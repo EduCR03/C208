@@ -1,0 +1,25 @@
+.text
+
+#Questão 2
+# f = t0, g = t1, t = t2, i = t3, j = t4
+addi $t0, $0, 5
+addi $t1, $0, 3
+add $t2, $t0, $t1
+
+# Passo 1
+# $t0 = 5, $t1 = 0, $t2 = 0
+#Passo 2
+# $t0 = 5, $t1 = 3, $t2 = 0
+#Passo 3
+# $t0 = 5, $t1 = 3, $t2 = 8
+
+addi $t1, $0, 3
+addi $t0, $0, 5
+add $t3, $t0, $t1
+addi $t4, $0, 1
+add $t5, $t0, $t1 # = g + h
+add $t6, $t3, $t4 # = i + j
+sub $t0, $t5, $t6
+
+addi $t7, $0, 2
+mult $t8, $t1, $t7 # = 3 * 2
